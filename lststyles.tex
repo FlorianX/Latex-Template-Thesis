@@ -1,0 +1,126 @@
+\usepackage{listings}
+\lstloadlanguages{Java,sh,bash,Haskell}
+\lstdefinelanguage{console}{
+  morekeywords={},
+  otherkeywords={warumgehtdasnicht>,\$}
+}
+\newcommand{\lstsetconsole}
+{ \lstset{%language=sh,
+        lineskip=-2pt,
+        breaklines=true,
+        language=console,
+        breaklines=true,
+        basicstyle=\sffamily,
+        commentstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+  }
+}
+\lstdefinelanguage{scalaconsole}{
+  morekeywords={},
+  otherkeywords={scala>,\|}
+}
+\newcommand{\lstsetrepl}
+{ \lstset{%language=sh,
+        lineskip=-2pt,
+        breaklines=true,
+        basicstyle=\ttfamily,
+        language=scalaconsole,
+        breaklines=true,
+        basicstyle=\sffamily,
+        commentstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+  }
+}
+\newcommand{\lstsetjava}{
+ \lstset{language=Java,
+        breaklines=true,
+        commentstyle=\sffamily,
+        keywordstyle=\bfseries,
+        basicstyle=\sffamily,
+        showstringspaces=false,
+        stringstyle=\ttfamily,
+        frame=single,
+        tabsize=2,
+        literate=
+        %linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+    do,else,extends,false,final,finally,%
+    for,forSome,if,implicit,import,lazy,match,mixin,%
+    new,null,object,override,package,%
+    private,protected,requires,return,sealed,%
+    super,this,throw,trait,true,try,%
+    type,val,var,while,with,yield},
+  otherkeywords={_,:,=,=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+\newcommand{\lstsetscala}{
+ \lstset{language=scala,
+        breaklines=true,
+        commentstyle=\sffamily,
+        basicstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\newcommand{\lstsethtml}{
+ \lstset{language=html,
+        breaklines=true,
+        commentstyle=\sffamily,
+        basicstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\lstnewenvironment{code}
+    {\lstset{}%
+      \csname lst@SetFirstLabel\endcsname}
+    {\csname lst@SaveFirstLabel\endcsname}
+\newcommand{\lstsethaskell}{
+    \lstset{
+      language=Haskell,
+      commentstyle=\sffamily,
+      keywordstyle=\bfseries,
+      basicstyle=\ttfamily,
+      stringstyle=\ttfamily,
+      showstringspaces=false,
+      frame=single,
+      flexiblecolumns=false,
+      basewidth={0.5em,0.45em},
+      literate={+}{{$+$}}1 {/}{{$/$}}1 {*}{{$*$}}1 {=}{{$=$}}1
+               {==}{{$==$}}2 %{!=}{{$\not\equiv$}}2
+               {>}{{$>$}}1 {<}{{$<$}}1 {\\}{{$\lambda$}}1
+               {\\\\}{{\char`\\\char`\\}}1
+               {->}{{$\rightarrow$} }2 {>=}{{$\geq$}}2 {<-}{{$\leftarrow$}}2
+               {<=}{{$\leq$}}2 {=>}{{$\Rightarrow$} }2
+               {\ .}{{$\circ$}}2 {\ .\ }{{$\circ$}}2 {(.)}{({$\circ$})}2
+               {>>}{{>>}}2 {>>=}{{>>=}}2
+               {|}{{$\mid$}}1
+    }
+}

@@ -1,7 +1,35 @@
 \chapter{Chapter eins}
 bla test.\footnote{http://www.fh-schmalkalden.de}
-\newpage
 
+\lstsethaskell
+\begin{lstlisting}[label=listinghaskell,caption=This is Haskell]
+module Main where
+
+f :: Show a => a -> Int -> String
+f x i = show x ++ show i
+
+main :: IO ()
+main = do
+  putStrLn "Hello World"
+  putStrLn $ f 1.2 3
+  print $ sum [1..10]
+\end{lstlisting}
+
+\lstsetjava
+\begin{lstlisting}[label=listingjava,caption=This is Java]
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+\end{lstlisting}
+
+\lstsetscala
+\begin{lstlisting}[label=listingscala,caption=This is Scala]
+class Main extends App {
+  println("Hello World")
+}
+\end{lstlisting}
 \section{hans wurst}
 one more page
 
