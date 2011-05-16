@@ -1,12 +1,20 @@
 % define documentclass
-\documentclass[12pt, bibtotoc, liststotoc, a4paper]{scrreprt}
+\documentclass[12pt, bibtotoc, a4paper]{scrreprt}
 
 % define used packages
-\usepackage[utf8x]{inputenc}
-\usepackage[ngerman]{babel}
-\usepackage{listings}
-\usepackage{lastpage}
+\usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{bibgerm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{helvet}
+\usepackage{listings}
+\usepackage[numbers]{natbib}
+\bibliographystyle{alphadin}
+
+\usepackage{lastpage}
+
 \usepackage{fancyhdr}
 
 % define the programming language  
@@ -85,7 +93,10 @@
 % # load the bibliography
 % #####
 \bibliography{bibliography}
-\bibliographystyle{alphadin}
 
+% #####
+% # load the sworn declaration
+% #####
+\input{declaration}
 % end of the document 
 \end{document}
