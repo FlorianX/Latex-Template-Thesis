@@ -1,0 +1,64 @@
+% #####
+% # This is the titlelayout from Prof. Dr. Oliver Braun (Fachhochschule
+% # Schmalkalden)
+% #
+% # if you want to use it, please comment the lower title layout 
+% #  
+% #####
+
+% \author{
+% \\[1em]
+% an der Fachhochschule Schmalkalden\\
+% Fakultät Informatik\\[2em]
+%   Referent: \REFERENT\\
+%   Koreferent: \COREFERENT\\[2em]
+% eingereicht von:\\[1em]
+% \AUTHOR\\
+% Matrikel-Nr.: \MATNR\\
+% \STREET\\
+% \TOWN\\
+% }
+% \date{Schmalkalden, den \DATE}
+% \title{\TITLE}
+% \subtitle{
+% \TYPE\\
+% Zur Erlangung des akademischen Grades eines\\
+% \COMPLETION
+% }
+%\maketitle
+
+% #####
+% #
+% # Default layout
+% #
+% #####
+\begin{titlepage}
+  \begin{center}
+  	\includegraphics[scale=0.15]{images/logo.jpg}
+  \end{center}
+  \vspace{40pt}
+  \sffamily
+  \begin{tabular}{|ll@{}}
+    & \\[\baselineskip]
+    & \large\textbf{\TYPE}\\[\baselineskip]
+    & \huge\textbf{\TITLE}\\[\baselineskip]
+    & \textbf{Zur Erlangung des akademischen Grades eines}\\[\baselineskip]
+    & \COMPLETION\\[\baselineskip]
+    & - \COURSE -\\[\baselineskip]
+    & \\[\baselineskip]
+  \end{tabular}
+  \vfill
+  \begin{tabular}{ll@{}}
+    & Fachbereich Informatik\\[\baselineskip]
+    &   Referent: \REFERENT\\[\baselineskip]
+    &   Koreferent: \COREFERENT\\[\baselineskip]
+    & \\[\baselineskip]
+    & eingereicht von:\\[\baselineskip]
+    & \AUTHOR\\[\baselineskip]
+    & Matr.-Nr. \MATNR\\[\baselineskip]
+    & \STREET\\[\baselineskip]
+    & \TOWN\\[\baselineskip]
+    & \\[\baselineskip]
+    & Schmalkalden, den \DATE\\[\baselineskip]
+  \end{tabular}
+\end{titlepage}

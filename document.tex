@@ -1,0 +1,91 @@
+% define documentclass
+\documentclass[12pt, bibtotoc, liststotoc, a4paper]{scrreprt}
+
+% define used packages
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{listings}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+% define the programming language  
+\lstset{language=html,frame=single}
+
+%set default pagestyle
+\pagestyle{empty}
+
+% #####
+% #  
+% # START config area  
+% #  
+% #####
+
+\newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
+\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastPage}}
+\newcommand{\DATE}[0]{1.1.2012}
+
+\newcommand{\AUTHOR}[0]{Max Müller}
+\newcommand{\MATNR}[0]{123456}
+\newcommand{\STREET}[0]{Musterstraße 11}
+\newcommand{\TOWN}[0]{12345 Musterstadt}
+
+\newcommand{\REFERENT}[0]{Prof. Dr. Marianne Musterfrau}
+\newcommand{\COREFERENT}[0]{Prof. Dr. Max Mustermann}
+
+\newcommand{\TITLE}[0]{Thema}
+\newcommand{\COURSE}[0]{Studiengang}
+\newcommand{\TYPE}[0]{Masterarbeit}
+\newcommand{\COMPLETION}[0]{Master of Science}
+
+% #####
+% #  
+% # END config area  
+% #  
+% #####
+
+% starting the document
+\begin{document}
+
+% input the title
+\input{title}
+
+% set pagenumbering to roman(I II III IV)
+\pagenumbering{Roman}
+% loads the fancy pagestyle for register part
+\input{fancyRegisterPart}
+
+% create the registers
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+% load the preamble
+\input{preamble}
+
+% set pagenumbering to arabic(1 2 3 4)
+\pagenumbering{arabic}
+% loads the fancy pagestyle for main part
+\input{fancyMainPart}
+
+% #####
+% # load the chapter from the files
+% # 
+% # TODO: create new chapter
+% #####
+\input{chapter1}
+
+% #####
+% # load the appendix from the files
+% #####
+\input{appendix}
+
+% #####
+% # load the bibliography
+% #####
+\bibliography{bibliography}
+\bibliographystyle{alphadin}
+
+% end of the document 
+\end{document}
