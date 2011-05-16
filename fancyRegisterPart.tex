@@ -1,13 +1,26 @@
 % set the pagestyle to fancy
 \pagestyle{fancy}
 
-% override the plain style
-\fancypagestyle{plain}{%
 \fancyhf{}% clear all fields
   % define the header
   \fancyhead[L]{\leftmark}% left header
   \fancyhead[R]{\HEADER}% right header
   \renewcommand{\headrulewidth}{0.4pt}% top line
+
+  % define the footer
+  \fancyfoot[L]{\AUTHOR}% left footer
+  \fancyfoot[R]{\pagemark}% right footer
+  \renewcommand{\footrulewidth}{0.6pt}% bottom line
+
+  % redefine the chaptermark to have '1. Chaptername' and not 'CHAPTER 1.
+  % CHAPTERNAME'
+  \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+
+% override the plain style
+\fancypagestyle{plain}{%
+\fancyhf{}% clear all fields
+  % define the header
+  \renewcommand{\headrulewidth}{0.0pt}% top line
 
   % define the footer
   \fancyfoot[L]{\AUTHOR}% left footer

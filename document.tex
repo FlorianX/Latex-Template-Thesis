@@ -1,5 +1,5 @@
 % define documentclass
-\documentclass[12pt, bibtotoc, a4paper]{scrreprt}
+\documentclass[12pt, bibtotoc, a4paper, abstracton]{scrreprt}
 
 % define used packages
 \usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
@@ -17,16 +17,16 @@
 
 \usepackage{fancyhdr}
 
-% define the programming language  
+% define the programming language
 \lstset{language=html,frame=single}
 
 %set default pagestyle
 \pagestyle{empty}
 
 % #####
-% #  
-% # START config area  
-% #  
+% #
+% # START config area
+% #
 % #####
 
 \newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
@@ -47,30 +47,29 @@
 \newcommand{\COMPLETION}[0]{Master of Science}
 
 % #####
-% #  
-% # END config area  
-% #  
+% #
+% # END config area
+% #
 % #####
 
 % starting the document
 \begin{document}
 
+% set pagenumbering to roman(I II III IV)
+\pagenumbering{Roman}
 % input the title
 \input{title}
 
-% set pagenumbering to roman(I II III IV)
-\pagenumbering{Roman}
+\input{abstract}
+
+% load the preamble
+\input{preamble}
+
 % loads the fancy pagestyle for register part
 \input{fancyRegisterPart}
 
 % create the registers
-\tableofcontents
-\listoffigures
-\listoftables
-\lstlistoflistings
-
-% load the preamble
-\input{preamble}
+\tableofcontents\newpage
 
 % set pagenumbering to arabic(1 2 3 4)
 \pagenumbering{arabic}
@@ -79,15 +78,30 @@
 
 % #####
 % # load the chapter from the files
-% # 
+% #
 % # TODO: create new chapter
 % #####
 \input{chapter1}
-
-% #####
-% # load the appendix from the files
-% #####
-\input{appendix}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
+\input{chapter1}
 
 % #####
 % # load the bibliography
@@ -95,8 +109,16 @@
 \bibliography{bibliography}
 
 % #####
+% # load the appendix from the files
+% #####
+\input{appendix}
+
+\listoffigures
+\listoftables
+\lstlistoflistings
+% #####
 % # load the sworn declaration
 % #####
 \input{declaration}
-% end of the document 
+% end of the document
 \end{document}
