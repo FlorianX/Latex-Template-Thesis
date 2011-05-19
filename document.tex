@@ -13,7 +13,8 @@
 \usepackage[numbers]{natbib}
 \bibliographystyle{alphadin}
 
-\usepackage{lastpage}
+%\usepackage{lastpage}
+\usepackage{array}
 
 \usepackage{fancyhdr}
 
@@ -30,13 +31,14 @@
 % #####
 
 \newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
-\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastPage}}
+\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{EndOfContent}}
 \newcommand{\DATE}[0]{1.1.2012}
 
 \newcommand{\AUTHOR}[0]{Max Müller}
 \newcommand{\MATNR}[0]{123456}
 \newcommand{\STREET}[0]{Musterstraße 11}
-\newcommand{\TOWN}[0]{12345 Musterstadt}
+\newcommand{\ZIP}[0]{12345}
+\newcommand{\TOWN}[0]{Musterstadt}
 
 \newcommand{\REFERENT}[0]{Prof. Dr. Marianne Musterfrau}
 \newcommand{\COREFERENT}[0]{Prof. Dr. Max Mustermann}
@@ -69,7 +71,11 @@
 \input{fancyRegisterPart}
 
 % create the registers
-\tableofcontents\newpage
+\tableofcontents
+
+\newpage
+\newcounter{roemisch}
+\setcounter{roemisch}{\value{page}}
 
 % set pagenumbering to arabic(1 2 3 4)
 \pagenumbering{arabic}
@@ -83,6 +89,17 @@
 % #####
 \input{chapter1}
 \input{chapter2}
+
+\label{EndOfContent}
+
+\newpage
+
+% loads the fancy pagestyle for register part
+\input{fancyRegisterPart}
+
+% Setze Numerierung wieder auf römisch zurück und setze von oben fort
+\pagenumbering{Roman}
+\setcounter{page}{\value{roemisch}}
 
 % #####
 % # load the bibliography
