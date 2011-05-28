@@ -13,18 +13,18 @@
 \usepackage[numbers]{natbib}
 \bibliographystyle{alphadin}
 
-%\usepackage{lastpage}
+\usepackage{lastpage}
 
-% Für erweiterte Tabellengestaltung 
+% advanced tables
 \usepackage{array}
 
-% Kopf und Fusszeilen gestalten
+% header and footer
 \usepackage{fancyhdr}
 
-% URLs verlinken (für PDF)
+% links
 \usepackage{url}
 
-% Für Formael
+% mathematical formulas
 \usepackage{amsmath, amssymb}
 
 % define the programming language
@@ -40,7 +40,7 @@
 % #####
 
 \newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
-\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{EndOfContent}}
+\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastPage}}
 \newcommand{\DATE}[0]{1.1.2012}
 
 \newcommand{\AUTHOR}[0]{Max Müller}
@@ -80,11 +80,7 @@
 \input{fancyRegisterPart}
 
 % create the registers
-\tableofcontents
-
-\newpage
-\newcounter{roemisch}
-\setcounter{roemisch}{\value{page}}
+\tableofcontents\newpage
 
 % set pagenumbering to arabic(1 2 3 4)
 \pagenumbering{arabic}
@@ -99,16 +95,10 @@
 \input{chapter1}
 \input{chapter2}
 
-\label{EndOfContent}
-
 \newpage
 
 % loads the fancy pagestyle for register part
 \input{fancyRegisterPart}
-
-% Setze Numerierung wieder auf römisch zurück und setze von oben fort
-\pagenumbering{Roman}
-\setcounter{page}{\value{roemisch}}
 
 % #####
 % # load the bibliography
