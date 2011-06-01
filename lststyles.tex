@@ -1,5 +1,5 @@
 \usepackage{listings}
-\lstloadlanguages{Java,sh,bash,Haskell}
+\lstloadlanguages{Java,sh,bash,Haskell,HTML,PHP}
 \lstdefinelanguage{console}{
   morekeywords={},
   otherkeywords={warumgehtdasnicht>,\$}
@@ -85,7 +85,21 @@
  }
 }
 \newcommand{\lstsethtml}{
- \lstset{language=html,
+ \lstset{language=HTML,
+        breaklines=true,
+        commentstyle=\sffamily,
+        basicstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\newcommand{\lstsetphp}{
+ \lstset{language=PHP,
         breaklines=true,
         commentstyle=\sffamily,
         basicstyle=\sffamily,
