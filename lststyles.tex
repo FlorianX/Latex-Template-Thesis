@@ -138,3 +138,28 @@
                {|}{{$\mid$}}1
     }
 }
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch,%
+    function, return, null, catch, switch, var,%
+    if, in, while, do, else, case, break},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+\newcommand{\lstsetjavascript}{
+  \lstset{
+		language=JavaScript,
+		breaklines=true,
+		breaklines=true,
+		commentstyle=\sffamily,
+		basicstyle=\sffamily,
+		keywordstyle=\bfseries,
+		stringstyle=\ttfamily,
+		showstringspaces=false,
+		frame=single,
+		tabsize=2
+  }
+}
