@@ -1,5 +1,5 @@
 \usepackage{listings}
-\lstloadlanguages{Java,sh,bash,Haskell,HTML,PHP}
+\lstloadlanguages{Java,sh,bash,Haskell,HTML,PHP,XML}
 \lstdefinelanguage{console}{
   morekeywords={},
   otherkeywords={warumgehtdasnicht>,\$}
@@ -160,4 +160,84 @@
 		frame=single,
 		tabsize=2
   }
+}
+\newcommand{\lstsetxml}{
+ \lstset{language=XML,
+        breaklines=true,
+        commentstyle=\sffamily,
+        keywordstyle=\bfseries,
+        basicstyle=\sffamily,
+        showstringspaces=false,
+        stringstyle=\ttfamily,
+        frame=single,
+        tabsize=2,
+        literate=
+        %linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\lstdefinelanguage{CSharp}{
+ morekeywords = {abstract,event,new,struct,as,explicit,%
+    null,switch,base,extern,object,this,bool,false,%
+    operator,throw,break,finally,out,true,byte,fixed,%
+    override,try,case,float,params,typeof,catch,for,%
+    private,uint,char,foreach,protected,ulong,checked,%
+    goto,public,unchecked,class,if,readonly,unsafe,%
+    const,implicit,ref,ushort,continue,in,return,using,%
+    decimal,int,sbyte,virtual,default,interface,sealed,%
+    volatile,delegate,internal,short,void,do,is,sizeof,%
+    while,double,lock,stackalloc,else,long,static,%
+    enum,namespace,string,partial},
+  morecomment = [l]{//},
+  morecomment = [l]{///},
+  morecomment = [s]{/*}{*/},
+  morestring=[b]",
+  sensitive = true
+}
+\newcommand{\lstsetcsharp}{
+ \lstset{language=csharp,
+        breaklines=true,
+        commentstyle=\sffamily,
+        basicstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
+}
+\lstdefinelanguage{FSharp}{
+  morekeywords={abstract,and,as,assert,base,begin,%
+    class,default,delegate,do,done,downcast,downto,%
+    elif,else,end,exception,extern,false,finally,for,fun,%
+    function,if,in,inherit,inline,interface,internal,lazy,%
+    let,match,member,module,mutable,namespace,%
+    new,not,null,of,open,or,override,private,public,rec,%
+    return,static,struct,then,to,true,try,type,upcast,use,%
+    val,void,when,while,with,yield,asr,land,lor,lsl,lsr,lxor,%
+    mod,sig,atomic,break,checked,component,const,%
+    constraint,constructor,continue,eager,event,external,%
+    fixed,functor,global,include,method,mixin,object,%
+    parallel,process,protected,pure,sealed,tailcall,trait,virtual,volatile},     
+  sensitive=false,
+  morecomment=[l][\color{greencomments}]{///},
+  morecomment=[l][\color{greencomments}]{//},
+  morecomment=[s][\color{greencomments}]{{(*}{*)}},
+  morestring=[b]"
+}
+\newcommand{\lstsetfsharp}{
+ \lstset{language=fsharp,
+        breaklines=true,
+        commentstyle=\sffamily,
+        basicstyle=\sffamily,
+        keywordstyle=\bfseries,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+        %%linewidth=\textwidth,captionpos=b
+        %numbers=left, stepnumber=5, numbersep=10pt
+ }
 }
