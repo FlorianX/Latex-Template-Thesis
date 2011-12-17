@@ -35,8 +35,14 @@
 % to include images side by side
 \usepackage{subfigure}
 
+% to use floating images
+\usepackage{wrapfig}
+
 % define the programming language
 \input{lststyles}
+
+% used for more colums per page
+\usepackage{multicol}
 
 %set default pagestyle
 \pagestyle{empty}
@@ -67,6 +73,15 @@
 \newcommand{\COURSE}[0]{Studiengang}
 \newcommand{\TYPE}[0]{Masterarbeit}
 \newcommand{\COMPLETION}[0]{Master of Science}
+
+\hypersetup{
+pdfauthor = {\AUTHOR},
+pdftitle = {\TITLE},
+pdfsubject = {\TITLE},
+pdfkeywords = {},
+pdfcreator = {\LaTeX},
+pdfproducer = {\LaTeX}
+}
 
 % #####
 % #
